@@ -1,11 +1,14 @@
 <?php
 function generateStory($singular_noun, $verb, $color, $distance_unit){
-  $story = "\nThe {$singular_noun}s are lovely,\n{$color}, and deep.
-\nBut I have promises to keep,
-\nAnd {$distance_unit}s to go before I {$verb},
-\nAnd {$distance_unit}s to go before I {$verb}.\n";
+  $story = "\nThe {$singular_noun}s are lovely,\n
+{$color}, and deep.\n
+But I have promises to keep,\n
+And miles to go before I {$verb},\n
+And miles to go before I {$verb}.\n";
+ 
+$costume_story = str_replace ( "mile" , $distance_unit , $story);
 
-return $story;
+return $costume_story;
 }
 
 echo generateStory("bed", "sleep", "red", "mile");
