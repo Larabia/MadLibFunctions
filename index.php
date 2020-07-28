@@ -1,15 +1,15 @@
 <?php
-function generateStory($singular_noun, $verb, $color){
+function generateStory($singular_noun, $verb, $color, $distance_unit){
   $story = "\nThe {$singular_noun}s are lovely,\n{$color}, and deep.
 \nBut I have promises to keep,
-\nAnd miles to go before I {$verb},
-\nAnd miles to go before I {$verb}.\n";
+\nAnd {$distance_unit}s to go before I {$verb},
+\nAnd {$distance_unit}s to go before I {$verb}.\n";
 
 return $story;
 }
 
-echo generateStory("bed", "sleep", "red");
+echo generateStory("bed", "sleep", "red", "mile");
 
-echo generateStory("card", "take", "blue");
+echo generateStory("card", "take", "blue", "mile");
 
-echo generateStory("leaf", "shake", "green");
+echo generateStory("leaf", "shake", "green", "kilometer");
